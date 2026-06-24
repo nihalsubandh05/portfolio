@@ -219,11 +219,20 @@ section { position: relative; }
   font-size: 12.5px; padding: 5px 12px; border-radius: 100px;
   border: 1px solid var(--border); background: var(--bg-soft); color: var(--text-dim);
 }
-.work-link {
-  font-family: "Space Grotesk"; font-weight: 600; font-size: 14.5px; color: var(--accent);
-  position: relative; z-index: 1; transition: gap .25s, color .25s;
+.work-note {
+  font-size: 0.9rem !important; color: var(--text-faint) !important;
+  border-left: 2px solid var(--border-strong); padding-left: 12px; margin: -8px 0 22px !important;
 }
-.work-link:hover { color: var(--accent-2); }
+.work-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: "Space Grotesk"; font-weight: 600; font-size: 14.5px; color: var(--accent);
+  position: relative; z-index: 1; transition: transform .25s var(--ease), background .25s, border-color .25s, color .25s;
+  padding: 10px 18px; border-radius: 100px;
+  background: var(--surface-2); border: 1px solid var(--border-strong);
+}
+.work-link:hover { color: #0a0a12; background: var(--accent-2); border-color: var(--accent-2); transform: translateY(-2px); }
+.work-card.featured .work-link { background: var(--grad); color: #0a0a12; border-color: transparent; }
+.work-card.featured .work-link:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(124,139,255,0.4); }
 
 /* ============ Capabilities ============ */
 .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
